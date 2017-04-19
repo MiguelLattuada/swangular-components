@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
+    "module": "amd",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
@@ -16,8 +16,11 @@
       "es2016",
       "dom"
     ],
-    "outDir": "dist"
+    "outFile": "./dist/bundle.main.js"
   },
+  "files": [
+    "./index.ts"
+  ],
   "exclude": [
     "node_modules",
     "typings",
