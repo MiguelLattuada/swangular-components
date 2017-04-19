@@ -1,7 +1,7 @@
-import { BrowserModule  } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { ApiSwaggerComponent } from './components/api-swagger/api-swagger.component';
 export { ApiSwaggerComponent } from './components/api-swagger/api-swagger.component';
@@ -51,7 +51,7 @@ export * from './services/template.provider';
 export * from './schema/2.0/swagger.schema';
 
 const ENTRY_COMPONENTS: any[] = [
-    ...FORM_CONTROLS
+  ...FORM_CONTROLS
 ];
 
 export const SWANGULAR_COMPONENTS: any[] = [
@@ -80,27 +80,24 @@ export const SWANGULAR_PROVIDERS: any[] = [
   AuthService
 ];
 @NgModule({
-    declarations: [
-      ...SWANGULAR_COMPONENTS,
-      KeyValuePairsPipe,
-      VarDirective
-    ],
-    exports: [
-      ...SWANGULAR_COMPONENTS
-    ],
-    imports: [
-      BrowserModule,
-      HttpModule,
-      FormsModule,
-      ReactiveFormsModule
-    ],
-    entryComponents: ENTRY_COMPONENTS
+  declarations: [
+    ...SWANGULAR_COMPONENTS,
+    KeyValuePairsPipe,
+    VarDirective
+  ],
+  exports: [
+    ...SWANGULAR_COMPONENTS
+  ],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  entryComponents: ENTRY_COMPONENTS,
+  providers: [
+    ...SWANGULAR_PROVIDERS
+  ]
 })
 export class SwangularModule {
-  static forRoot(): ModuleWithProviders {
-    return {
-      ngModule: SwangularModule,
-      providers: SWANGULAR_PROVIDERS
-    };
-  }
 }
