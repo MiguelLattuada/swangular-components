@@ -1,6 +1,6 @@
 {
   "name": "swangular-components-commonjs",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Swagger UI components written in angular 2",
   "main": "compiled/index.ngfactory.js",
   "scripts": {
