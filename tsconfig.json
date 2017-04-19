@@ -11,7 +11,11 @@
     "suppressImplicitAnyIndexErrors": true,
     "declaration": true,
     "diagnostics": true,
-    "listFiles": false
+    "listFiles": false,
+    "lib": [
+      "es2016",
+      "dom"
+    ]
   },
   "exclude": [
     "node_modules",
