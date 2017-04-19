@@ -2,14 +2,14 @@
   "name": "swangular-components-commonjs",
   "version": "0.4.0",
   "description": "Swagger UI components written in angular 2",
-  "main": "index.js",
+  "main": "compiled/index.ngfactory.js",
   "scripts": {
     "start": "npm run ensureversion && ntsc && npm run copyhtml && concurrently \"npm run ntsc:w\" \"npm run copyhtml:w\"",
     "ensureversion": "node .scripts/version.js",
-    "build": "ntsc",
+    "build": "ngc",
     "postinstall": "typings install",
-    "ntsc": "ntsc",
-    "ntsc:w": "ntsc -w",
+    "ntsc": "ngc",
+    "ntsc:w": "ngc -w",
     "typings": "typings",
     "copyhtml": "cpx \"src/**/*.html\" lib",
     "copyhtml:w": "cpx \"src/**/*.html\" lib -w"

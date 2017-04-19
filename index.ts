@@ -43,6 +43,8 @@ import { HttpService } from './services/http.service';
 
 import { KeyValuePairsPipe } from './pipes/key-value-pairs.pipe';
 export { KeyValuePairsPipe } from './pipes/key-value-pairs.pipe';
+import { FirstPipe } from './pipes/first.pipe';
+export { FirstPipe } from './pipes/first.pipe';
 
 import { VarDirective } from './directives/var.directive';
 export { VarDirective } from './directives/var.directive';
@@ -83,6 +85,7 @@ export const SWANGULAR_PROVIDERS: any[] = [
   declarations: [
     ...SWANGULAR_COMPONENTS,
     KeyValuePairsPipe,
+    FirstPipe,
     VarDirective
   ],
   exports: [

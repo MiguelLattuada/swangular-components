@@ -68,11 +68,13 @@ export class ApiMethodComponent implements OnInit {
   @Input() method: string;
   @Input() urlTemplate: string;
 
+  public expanded: boolean;
+
   defaultResponseCode: string;
   defaultResponse: Response;
   otherResponses: { [id: string]: Response };
 
-  constructor(private _builder: RequestBuilder) {}
+  constructor(private _builder: RequestBuilder) { }
 
   ngOnInit() {
     this.defaultResponseCode = this.getDefaultResponseCode();
@@ -81,21 +83,21 @@ export class ApiMethodComponent implements OnInit {
   }
 
   private getOtherResponses(): any {
-    let responses: { [id: string] : Response } = {};
+    let responses: { [id: string]: Response } = {};
     let code = this.getDefaultResponseCode();
-    for(let key in this.operation.responses) {
-        if(key == code) {
-          continue;
-        }
-        responses[key] = this.operation.responses[key];
+    for (let key in this.operation.responses) {
+      if (key == code) {
+        continue;
+      }
+      responses[key] = this.operation.responses[key];
     }
     return responses;
   }
 
   private getDefaultResponseCode(): string {
     let code: string = '1000';
-    for(let key in this.operation.responses) {
-      if((+code) > (+key)) {
+    for (let key in this.operation.responses) {
+      if ((+code) > (+key)) {
         code = key;
       }
     }
