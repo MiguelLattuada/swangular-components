@@ -9,8 +9,9 @@ Thumbs.db
 # ignored
 lib
 typings
+dist
 
-*.js
-*.js.map
-*.d.ts
-!.scripts/*.js
+#*.js
+#*.js.map
+#*.d.ts
+#!.scripts/*.js
